@@ -2,6 +2,7 @@ import 'package:xwood/core/utils/constants/colors_const_app.dart';
 import 'package:xwood/export.dart';
 import 'package:xwood/screens/widgets/custom_elevated_button.dart';
 import 'package:xwood/screens/widgets/custom_text_field.dart';
+import 'package:xwood/screens/widgets/custom_title_text.dart';
 
 class ProfileSetupScreen extends StatelessWidget {
   ProfileSetupScreen({super.key});
@@ -29,23 +30,11 @@ class ProfileSetupScreen extends StatelessWidget {
             key: _profileSetupKey,
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              // crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
-                  "Profile Setup",
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    color: AppColorConst.scrim,
-                  ),
-                ),
-                Text(
-                  "Complete your profile to access all the features",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w300,
-                    color: AppColorConst.scrim,
-                  ),
+                CustomPageTitleText(
+                  title: "Profile Setup",
+                  subtitle: "Complete your profile to access all the features",
                 ),
                 gap30,
                 CustomTextField(

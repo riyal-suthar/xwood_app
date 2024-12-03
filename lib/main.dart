@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        // fontFamily: 'Geologica',
+        fontFamily: 'Geologica',
         brightness: AppMaterialTheme.lightScheme().brightness,
         colorScheme: AppMaterialTheme.lightScheme(),
         textTheme: TextTheme().apply(
