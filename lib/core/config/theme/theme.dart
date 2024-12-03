@@ -275,13 +275,9 @@ class AppMaterialTheme {
 
   static final BottomNavigationBarThemeData _navigationBarTheme =
       BottomNavigationBarThemeData(
-        backgroundColor: HexColor(AppColorConst.kNavbarBg),
-        selectedIconTheme: IconThemeData(
-          color: HexColor(AppColorConst.kNavbarItemSelected),
-        ),
-        unselectedIconTheme: IconThemeData(
-          color: HexColor(AppColorConst.kNavbarItemUnSelected),
-        ),
+        backgroundColor: AppColorConst.scrim,
+        selectedIconTheme: IconThemeData(color: AppColorConst.kGrey300),
+        unselectedIconTheme: IconThemeData(color: AppColorConst.kSecondary),
         selectedLabelStyle: TextStyle(
           color: HexColor("#FFFFFF"),
           fontSize: 14,

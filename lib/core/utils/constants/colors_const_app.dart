@@ -3,10 +3,21 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class AppColorConst {
-  // Bottom NavBar
-  static const String kNavbarBg = "#262A2B";
-  static const String kNavbarItemSelected = "#FFFFFF";
-  static const String kNavbarItemUnSelected = "#EEE2CA";
+  // primary
+  static const Color kprimary = Color(0xFF95622D);
+  static const Color kSecondary = Color(0xFFEEE2CA);
+
+  static const Color kWhiteColor = Color(0xFFFFFFFF);
+  static const Color kDarkBlue = Color(0xFF0B1520);
+  static const Color kRedError = Color(0xFFD83631);
+  static const Color kStarColor = Color(0xFFEDB31E);
+  static const Color kStarBtnBgColor = Color(0xFFFFF9EB);
+  // Grey scale
+  static const Color kGrey100 = Color(0xFFD8D8D8);
+  static const Color kGrey200 = Color(0xFF6D6D6D);
+  static const Color kGrey300 = Color(0xFF262A2B);
+  static const Color kGrey300_2 = Color(0xFF474747);
+  static const Color kGrey400 = Color(0xFF0F1313);
 
   static const primary = Color(4285218571);
   static const surfaceTint = Color(4286862112);

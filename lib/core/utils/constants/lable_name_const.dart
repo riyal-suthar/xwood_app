@@ -5,6 +5,10 @@ class AppLables {
   // screen texts
   static const String designYour = 'Design Your';
   static const String logInTitle = "Let's Get Started";
+  static const String getStartedDesc =
+      "Do Effortless shopping just\n"
+      "browse, select, and purchase\n"
+      "within seconds—it's simple!";
   static const String logInDesc = "Unlock your dream space with a few taps";
   static const String registrationTitle = "Profile Setup";
   static const String registrationDesc =
@@ -14,6 +18,86 @@ class AppLables {
       "We have just sent OTP code to your below\nmobile number";
 
   static const String dynamicTitle = "dynamicTitle";
+
+  // Form
+  static String mobileNumber = "Mobile Number";
+  static String enterMobileNumber = "Enter mobile number";
+  static String fullName = "Full Name";
+  static String enterName = "Enter name";
+  static String enterMessage = "Enter message";
+  static String email = "Email";
+  static String enterEmail = "Enter email";
+  static String governate = "Governate";
+  static String submit = "Submit";
+  static String dream = 'Dream';
+  static String update = 'update';
+  static String space = 'Space';
+  static String getStarted = "Get Started";
+  static String chooseLanguage = "Choose Language";
+  static String continueLan = "Continue";
+  static String verify = "verify";
+  static String resendCodeIn = "resend_code_in";
+  static String resend = "Resend";
+  static String otpExpiredError = "Entered OTP is invalid or expired.";
+  static String continueAsGuest = "Continue As Guest";
+  static String termsPart1 = "By continuing, I agree to the";
+
+  //Home
+  static const String home = 'Home';
+
+  //Category
+  static const String category = 'Category';
+  static const String chair = "Chair";
+  static const String sofa = "Sofa";
+  static const String bed = "Bed";
+  static const String lamp = "Lamp";
+  static const String storage = "Storage";
+  static const String kitchen = "Kitchen";
+  static const String dining = "Dining";
+
+  //Cart
+  static const String cart = 'Cart';
+
+  //Profile
+  static const String profile = 'Profile';
+  static const String logInNow = 'Login Now';
+  static const String categories = 'Categories';
+  static const String popularFurniture = 'Popular Furniture';
+  static const String viewAll = 'View All';
+  static const String addToCart = 'Add to Cart';
+  static const String remove = 'Remove';
+  static const String welcome = 'Welcome!';
+  static const String myOrders = 'My Orders';
+  static const String myAddress = 'My Address';
+  static const String returnAndRefund = 'Return & Refund';
+  static const String myReviews = 'My Reviews';
+  static const String changeLanguage = 'Change Language';
+  static const String termsOfUse = 'Terms of Use';
+  static String edit = 'edit';
+  static String editProfile = 'edit_profile';
+  static String favourites = 'favourites';
+  static String orderID = 'Order Id';
+  static String order = 'Order';
+  static String deliverOn = 'Deliver On';
+  static String qty = 'Qty';
+
+  static const String aboutUs = 'About us';
+  static const String feedBack = 'Feedback';
+  static const String termsAndConditions = 'Terms & Conditions';
+  static const String privacyPolicy = 'Privacy Policy';
+  static const String returnPolicy = 'Return Policy';
+  static const String shippingPolicy = 'Shipping Policy';
+  static const String faqs = 'FAQs';
+  static const String contactUs = 'Contact us';
+
+  static const String logout = 'Logout';
+  static const String message = 'Message';
+  static const String logoutMessage = 'Are you sure you want to logout?';
+  static const String cancel = 'Cancel';
+  static const String yesLogout = 'Yes, Logout';
+  static const String deleteAccount = 'Delete Account';
+
+  static const String appVersion = 'App Version';
 
   // Common Actions
   static const String okLabel = "ok";
