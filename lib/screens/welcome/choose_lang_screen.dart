@@ -7,6 +7,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:xwood/core/config/routes/app_routes.dart';
 import 'package:xwood/core/utils/constants/colors_const_app.dart';
 import 'package:xwood/core/utils/constants/ui_const.dart';
+import 'package:xwood/screens/widgets/custom_title_text.dart';
 
 import '../../data/shared_pref.dart';
 
@@ -63,14 +64,7 @@ class _ChooseLangScreenState extends State<ChooseLangScreen> {
         textDirection: TextDirection.ltr,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Choose Language",
-            style: TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 28,
-              color: HexColor("#0F1313"),
-            ),
-          ),
+          CustomPageTitleText(title: "Choose Language"),
           gapy16,
           buildLangList(),
         ],

@@ -69,3 +69,46 @@ class CustomTextField extends StatelessWidget {
     );
   }
 }
+
+class CustomMobileTextField extends StatefulWidget {
+  CustomMobileTextField({super.key});
+
+  @override
+  State<CustomMobileTextField> createState() => _CustomMobileTextFieldState();
+}
+
+class _CustomMobileTextFieldState extends State<CustomMobileTextField> {
+  List<String> countrylist = [];
+
+  var _selected;
+
+  @override
+  Widget build(BuildContext context) {
+    return Flex(
+      direction: Axis.horizontal,
+      children: [
+        DropdownButtonFormField(
+          items:
+              countrylist.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+          value: _selected,
+          onChanged: (val) {
+            setState(() {
+              _selected = val;
+            });
+          },
+          validator: (value) {
+            if (value == null) {
+              return 'Please select an country code';
+            }
+            return null;
+          },
+        ),
+      ],
+    );
+  }
+}

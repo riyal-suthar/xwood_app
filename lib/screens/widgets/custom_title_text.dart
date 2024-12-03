@@ -11,6 +11,7 @@ class CustomPageTitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      spacing: 12.0,
       children: [
         Text(
           title,

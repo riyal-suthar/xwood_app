@@ -1,5 +1,19 @@
 class AppLables {
-  // screens name
+  static const String appName = 'Xwood';
+  static const String noDataFoundLabel = 'no_data_found_label';
+
+  // screen texts
+  static const String designYour = 'Design Your';
+  static const String logInTitle = "Let's Get Started";
+  static const String logInDesc = "Unlock your dream space with a few taps";
+  static const String registrationTitle = "Profile Setup";
+  static const String registrationDesc =
+      "Complete your profile to access all\n the features.";
+  static const String otpVerificationTitle = "OTP Verification";
+  static const String otpVerificationDesc =
+      "We have just sent OTP code to your below\nmobile number";
+
+  static const String dynamicTitle = "dynamicTitle";
 
   // Common Actions
   static const String okLabel = "ok";

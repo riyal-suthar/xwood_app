@@ -5,6 +5,7 @@ import 'package:xwood/core/utils/constants/ui_const.dart';
 import 'package:xwood/screens/widgets/custom_elevated_button.dart';
 import 'package:xwood/screens/widgets/custom_outlined_button.dart';
 import 'package:xwood/screens/widgets/custom_text_field.dart';
+import 'package:xwood/screens/widgets/custom_title_text.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -28,27 +29,9 @@ class LoginScreen extends StatelessWidget {
               spacing: 12.0,
               children: [
                 gap16,
-                Padding(
-                  padding: p4,
-                  child: Text(
-                    "Lets Get Started",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      color: AppColorConst.scrim,
-                      fontSize: 28,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: p4,
-                  child: Text(
-                    "dvcsd daccccc adsc as sd dddddddddddd",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w300,
-                      color: AppColorConst.scrim,
-                      fontSize: 16,
-                    ),
-                  ),
+                CustomPageTitleText(
+                  title: "Lets Get Started",
+                  subtitle: "dvcsd daccccc adsc as sd dddddddddddd",
                 ),
                 gap40,
                 Text("Mobile Number"),

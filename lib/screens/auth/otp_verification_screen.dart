@@ -2,6 +2,7 @@ import 'package:xwood/core/utils/constants/colors_const_app.dart';
 import 'package:xwood/core/utils/constants/ui_const.dart';
 import 'package:xwood/screens/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
+import 'package:xwood/screens/widgets/custom_title_text.dart';
 
 class OtpVerificationScreen extends StatelessWidget {
   const OtpVerificationScreen({super.key});
@@ -12,29 +13,10 @@ class OtpVerificationScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          Padding(
-            padding: p4,
-            child: Text(
-              "OTP Verification",
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: AppColorConst.scrim,
-                fontSize: 28,
-              ),
-            ),
+          CustomPageTitleText(
+            title: "OTP Verification",
+            subtitle: "We have just sent OTP code to your below mobile number",
           ),
-          Padding(
-            padding: p4,
-            child: Text(
-              "We have just sent OTP code to your below mobile number",
-              style: TextStyle(
-                fontWeight: FontWeight.w300,
-                color: AppColorConst.scrim,
-                fontSize: 16,
-              ),
-            ),
-          ),
-
           RichText(
             text: const TextSpan(
               children: [
