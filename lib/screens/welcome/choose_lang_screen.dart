@@ -31,7 +31,7 @@ class _ChooseLangScreenState extends State<ChooseLangScreen> {
           Padding(
             padding: const EdgeInsets.only(top: 119),
             child: Row(
-              spacing: 324,
+              // spacing: 324,
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [

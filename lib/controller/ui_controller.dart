@@ -10,10 +10,17 @@ class UiController extends GetxController {
       productCount--;
     }
   }
-
   void ProductQuantityAdd() {
     productCount++;
   }
+
+  // Mobile TextField => Country Code
+  List<String> countrylist = ["Uk", "USA", "India"];
+  var _selected = "Uk".obs;
+  void selectCountryCode(var code){
+    _selected = code;
+  }
+
 
   // custom carousel index
   List<int> bannerlist = [0];

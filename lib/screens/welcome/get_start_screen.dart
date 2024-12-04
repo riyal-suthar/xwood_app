@@ -12,8 +12,8 @@ class GetStartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: SizedBox(
+    return Scaffold(
+      body: SizedBox(
         child: Stack(
           alignment: Alignment.centerRight,
           children: [
@@ -47,11 +47,13 @@ class GetStartScreen extends StatelessWidget {
             ),
 
             Padding(
-              padding: p24,
+              padding: EdgeInsets.symmetric(vertical: 70, horizontal: 24),
               child: Column(
                 // mainAxisSize: MainAxisSize.min,
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: 450,
+                // spacing: 450,
                 children: [
                   RichText(
                     text: const TextSpan(
@@ -94,15 +96,14 @@ class GetStartScreen extends StatelessWidget {
                     //   SharedPrefService.getInstance();
                     SharedPrefService.instance?.isFirstTime = true;
                     print(
-                      SharedPrefService.instance?.isFirstTime ??
-                          SharedPrefService.instance?.isFirstTime,
+                      SharedPrefService.instance?.isFirstTime
                     );
                     Get.toNamed(AppRoutes.chooseLangScreen);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     mainAxisSize: MainAxisSize.min,
-                    spacing: 10.0,
+                    // spacing: 10.0,
                     children: [
                       Text(
                         "Get Started",

@@ -1,3 +1,5 @@
+import 'package:xwood/core/utils/constants/colors_const_app.dart';
+import 'package:xwood/core/utils/constants/lable_name_const.dart';
 import 'package:xwood/export.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -11,13 +13,12 @@ class CategoryItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
-        // spacing: 8.0,
         children: [
           Container(
             height: 75,
-            width: 110,
+            width: 75,
             decoration: BoxDecoration(
-              color: Colors.grey.shade100,
+              color: AppColorConst.kGrey100,
               shape: BoxShape.circle,
             ),
             child: IconButton(
@@ -25,10 +26,11 @@ class CategoryItem extends StatelessWidget {
               highlightColor: Colors.transparent,
               hoverColor: Colors.transparent,
               onPressed: () {},
-              icon: Icon(Icons.chair),
+              icon: Icon(Icons.chair, color: AppColorConst.kGrey300,),
             ),
           ),
-          Text("category"),
+          gapy6,
+          Text(AppLables.category),
         ],
       ),
     );

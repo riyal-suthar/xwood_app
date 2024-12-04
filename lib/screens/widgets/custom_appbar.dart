@@ -9,6 +9,7 @@ class CustomAppbar {
   }) => AppBar(
     title: Text(title),
     automaticallyImplyLeading: autoImplyLead,
+    backgroundColor: Colors.transparent,
     actions: [searchButton(), favoriteButton(), notificationButton(), action],
   );
 

@@ -1,4 +1,5 @@
 import 'package:xwood/core/utils/constants/colors_const_app.dart';
+import 'package:xwood/core/utils/constants/lable_name_const.dart';
 import 'package:xwood/screens/widgets/custom_elevated_button.dart';
 import 'package:xwood/screens/widgets/custom_outlined_button.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: CustomAppbar.buildAppBar(
-        title: "xwood",
+        title: AppLables.appName,
+        autoImplyLead: false,
         action: logOutButton(context),
       ),
       body: SingleChildScrollView(
@@ -38,23 +40,21 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: px24,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-
             children: [
-              // custom carousel view
-              CustomCarouselView(),
 
-              // categories
+              CustomCarouselView(),  // custom carousel view
               TitleTextWidget(
-                title: 'Categories',
+                title: AppLables.categories,
                 onTappedPage: () {
                   customBottomSheet(context);
                 },
               ),
+              // gapy16,
               buildCategoryItems(context),
-
-              // custom list => product
-              TitleTextWidget(title: "Popular Products", onTappedPage: () {}),
-              Center(child: CustomProductListView()),
+              // gapy24,// categories
+              TitleTextWidget(title: AppLables.popularFurniture, onTappedPage: () {}),
+              // gapy16,
+              Center(child: CustomProductListView()), // custom list => product
             ],
           ),
         ),
@@ -158,18 +158,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
-                    spacing: 20.0,
+                    // spacing: 20.0,
                     children: [
-                      CustomElevatedButton(
-                        btnName: "Cancel",
-                        btnBGColor: AppColorConst.primary,
-                        onPressed: () {
-                          print("object");
-                        },
-                      ),
-                      CustomOutlinedButton(
-                        btnName: "Delete",
-                        btnColor: HexColor("#FFEBEB"),
+                      Flexible(
+                        child: CustomElevatedButton(
+                          btnName: "Cancel",
+                          btnBGColor: AppColorConst.primary,
+                          onPressed: () {
+                            print("object");
+                          },
+                        ),
+                      ),gapx20,
+                      Flexible(
+                        child: CustomOutlinedButton(
+                          btnName: "Delete",
+                          btnColor: HexColor("#FFEBEB"),
+                        ),
                       ),
                     ],
                   ),
@@ -202,10 +206,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   SizedBox buildCategoryItems(BuildContext context) {
     return SizedBox(
-      height: 108,
+      height: 106,
       width: MediaQuery.of(context).size.width - 10,
       child: ListView.builder(
-        prototypeItem: Text("please wait..."),
+        // prototypeItem: Text("please wait..."),
         shrinkWrap: true,
         primary: true,
         scrollDirection: Axis.horizontal,

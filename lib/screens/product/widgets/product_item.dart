@@ -69,26 +69,36 @@ class ProductItem extends StatelessWidget {
                   Text(
                     "4.4",
                     style: fontTheme.bodySmall!.copyWith(
-                      color: HexColor("#262A2B"),
+                      color: AppColorConst.kGrey300,
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  Icon(Icons.star, color: HexColor("#EDB31E")),
+                  Icon(Icons.star, color: AppColorConst.kStarColor),
                 ],
               ),
-              // TextButton.icon(
-              //   onPressed: () {},
-              //   label: Icon(Icons.star, color: HexColor("#EDB31E")),
-              //   icon: Text(
-              //     "4.4",
-              //     style: fontTheme.bodySmall!.copyWith(
-              //       color: HexColor("#262A2B"),
-              //       fontSize: 12,
-              //       fontWeight: FontWeight.w400,
-              //     ),
-              //   ),
-              // ),
+              SizedBox(
+                height: 19,
+                width: 60,
+                child: TextButton.icon(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: AppColorConst.kStarBtnBgColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(radius10),
+                    )
+                  ),
+                  label: Icon(Icons.star, color: AppColorConst.kStarColor),
+                  icon: Text(
+                    "4.4",
+                    style: fontTheme.bodySmall!.copyWith(
+                      color: AppColorConst.kGrey300,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
           gapy6,

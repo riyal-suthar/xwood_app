@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:xwood/core/utils/constants/colors_const_app.dart';
 import 'package:xwood/core/utils/constants/ui_const.dart';
 
@@ -53,7 +54,7 @@ class CustomTextField extends StatelessWidget {
               validator: validation,
               decoration: InputDecoration(
                 label: Text(hint ?? ""),
-                floatingLabelBehavior: FloatingLabelBehavior.never,
+                floatingLabelBehavior: FloatingLabelBehavior.always,
                 hintText: hint ?? "no hint",
                 contentPadding: ptf16_10,
                 border: OutlineInputBorder(
@@ -70,36 +71,79 @@ class CustomTextField extends StatelessWidget {
   }
 }
 
-class CustomMobileTextField extends StatefulWidget {
-  CustomMobileTextField({super.key});
+class CustomMobileTextField extends StatelessWidget {
+  final TextEditingController codeController;
+  final TextEditingController mobileNoController;
+  final countryCodeValidation;
+  final mobileNoValidation;
+  final bool obscure;
+  final TextInputType? keyboard;
+  CustomMobileTextField({super.key, this.obscure = false, this.keyboard, required this.codeController, required this.mobileNoController, this.countryCodeValidation, this.mobileNoValidation});
 
-  @override
-  State<CustomMobileTextField> createState() => _CustomMobileTextFieldState();
-}
-
-class _CustomMobileTextFieldState extends State<CustomMobileTextField> {
-  List<String> countrylist = [];
-
-  var _selected;
+  List<String> countrylist = ["Uk", "USA", "India"];
+  var _selected = "Uk".obs;
 
   @override
   Widget build(BuildContext context) {
     return Flex(
       direction: Axis.horizontal,
       children: [
-        DropdownButtonFormField(
+        SizedBox(
+          width: 100,
+          child: TextFormField(
+            style: TextStyle(color: Colors.red, fontSize: 16),
+            controller: codeController,
+            obscureText: obscure,
+            keyboardType: keyboard,
+            validator: countryCodeValidation,
+            decoration: InputDecoration(
+              // label: Text(" 965"),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              hintText: " 965",
+               contentPadding: ptf16_10,
+                border: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey.shade200),
+                borderRadius: const BorderRadius.all(radius10),
+                ),
+          ),
+                  ),
+        ),
+        gapx8,
+        Expanded(
+          child: TextFormField(
+            style: TextStyle(color: Colors.red, fontSize: 16),
+            controller: mobileNoController,
+            obscureText: obscure,
+            keyboardType: keyboard,
+            validator: mobileNoValidation,
+            decoration: InputDecoration(
+              hintText: "Enter Mobile Number",
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              contentPadding: ptf16_10,
+              border: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey.shade200),
+                borderRadius: const BorderRadius.all(radius10),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 24),
+      ],
+    );
+  }
+
+  DropdownButtonFormField<Object> buildDropdownButtonFormField() {
+    return DropdownButtonFormField(
           items:
-              countrylist.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
+          countrylist.map<DropdownMenuItem<String>>((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(value),
+            );
+          }).toList(),
           value: _selected,
           onChanged: (val) {
-            setState(() {
-              _selected = val;
-            });
+            _selected.value = val.toString();
           },
           validator: (value) {
             if (value == null) {
@@ -107,8 +151,6 @@ class _CustomMobileTextFieldState extends State<CustomMobileTextField> {
             }
             return null;
           },
-        ),
-      ],
-    );
+        );
   }
 }

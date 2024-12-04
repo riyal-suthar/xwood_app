@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:xwood/core/utils/constants/colors_const_app.dart';
 import 'package:xwood/core/utils/constants/image_const_app.dart';
 import 'package:xwood/export.dart';
@@ -26,7 +27,7 @@ class LoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.min,
               textDirection: TextDirection.ltr,
-              spacing: 12.0,
+              // spacing: 12.0,
               children: [
                 gap16,
                 CustomPageTitleText(
@@ -34,28 +35,7 @@ class LoginScreen extends StatelessWidget {
                   subtitle: "dvcsd daccccc adsc as sd dddddddddddd",
                 ),
                 gap40,
-                Text("Mobile Number"),
-                Flex(
-                  direction: Axis.horizontal,
-                  spacing: 8.0,
-                  children: [
-                    CustomTextField(
-                      hint: "+965",
-                      title: "",
-                      btnWidth: 85,
-                      flex: 1,
-                      controller: _countryCodeC,
-                      onTapped: () {},
-                    ),
-                    CustomTextField(
-                      hint: "Enter mobile",
-                      title: "",
-                      flex: 5,
-                      controller: _mobileC,
-                      onTapped: () {},
-                    ),
-                  ],
-                ),
+                CustomMobileTextField(codeController: _countryCodeC, mobileNoController: _mobileC),
                 gap30,
                 CustomElevatedButton(
                   btnName: "Continue",
@@ -70,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: RichText(
-                    text: const TextSpan(
+                    text:  TextSpan(
                       children: [
                         TextSpan(text: 'By continuing, I agree to the '),
                         TextSpan(
@@ -82,6 +62,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         TextSpan(text: ' & '),
                         TextSpan(
+                          recognizer: TapGestureRecognizer()..onTap = (){},
                           text: 'Privacy Policy',
                           style: TextStyle(
                             decoration: TextDecoration.underline,

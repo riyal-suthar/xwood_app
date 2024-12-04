@@ -104,10 +104,9 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 178,
+      height: 193,
       width: double.infinity,
       child: Column(
-        spacing: 8.0,
         children: [
           Expanded(
             child: PageView.builder(
@@ -130,6 +129,7 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
               },
             ),
           ),
+          gap14,
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,

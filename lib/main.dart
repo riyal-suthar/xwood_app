@@ -1,8 +1,11 @@
 import 'package:xwood/core/config/theme/theme.dart';
+import 'package:xwood/data/shared_pref.dart';
 
 import 'export.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPrefService.getInstance();
   runApp(const MyApp());
 }
 
@@ -26,15 +29,15 @@ class MyApp extends StatelessWidget {
         ),
         canvasColor: AppMaterialTheme.lightScheme().surface,
       ),
-      darkTheme: ThemeData(
-        useMaterial3: true,
-        fontFamily: 'Geologica',
-        brightness: AppMaterialTheme.darkScheme().brightness,
-        colorScheme: AppMaterialTheme.darkScheme(),
-        canvasColor: AppMaterialTheme.darkScheme().surface,
-      ),
+      // darkTheme: ThemeData(
+      //   useMaterial3: true,
+      //   fontFamily: 'Geologica',
+      //   brightness: AppMaterialTheme.darkScheme().brightness,
+      //   colorScheme: AppMaterialTheme.darkScheme(),
+      //   canvasColor: AppMaterialTheme.darkScheme().surface,
+      // ),
       // home: CustomProductListView(),
-      initialRoute: AppRoutes.bottomNavBarScreen,
+      initialRoute: AppRoutes.splashScreen,
       getPages: AppRoutes.getPages,
     );
   }

@@ -18,10 +18,13 @@ Size get size2 => const Size.fromHeight(2);
 Size get size56 => const Size.fromHeight(56.0);
 
 const SizedBox gapx8 = SizedBox(width: 8);
+const SizedBox gapx20 = SizedBox(width: 8);
+
 const SizedBox gapy6 = SizedBox(height: 6);
 const SizedBox gapy10 = SizedBox(height: 10);
 const SizedBox gapy16 = SizedBox(height: 16);
 const SizedBox gapy17 = SizedBox(height: 17);
+const SizedBox gapy24 = SizedBox(height: 24);
 //SizedBox
 const SizedBox gap2 = SizedBox(height: 2, width: 2);
 const SizedBox gap4 = SizedBox(height: 4, width: 4);

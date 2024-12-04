@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void check() async {
-    var sp = SharedPrefService.instance ?? SharedPrefService();
+    var sp = SharedPrefService.instance!;
 
     if (sp.authToken != null && sp.authToken != "") {
       log("authToken is => ${sp.authToken}");
