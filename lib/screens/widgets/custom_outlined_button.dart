@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xwood/core/utils/constants/colors_const_app.dart';
 
 class CustomOutlinedButton extends StatelessWidget {
   final String btnName;
@@ -14,19 +15,21 @@ class CustomOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: OutlinedButton(
-        onPressed: btnPressed,
-        child: Text(btnName),
-        style: OutlinedButton.styleFrom(
-          backgroundColor: btnColor,
-          fixedSize: Size(500, 52),
-          shape: RoundedRectangleBorder(
-            side: BorderSide(width: 1),
-            borderRadius: BorderRadius.circular(10),
-          ),
+    return OutlinedButton(
+      onPressed: btnPressed,
+
+      style: OutlinedButton.styleFrom(
+        backgroundColor: btnColor,
+        fixedSize: Size(300, 52),
+        shape: RoundedRectangleBorder(
+          side: BorderSide(width: 1, color: AppColorConst.kprimary),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
+      child: Text(btnName, style: const TextStyle(
+          color: AppColorConst.kprimary,
+          fontSize: 16
+      ),),
     );
   }
 }

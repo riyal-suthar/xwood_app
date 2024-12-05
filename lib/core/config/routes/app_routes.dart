@@ -3,6 +3,7 @@ import 'package:xwood/screens/auth/otp_verification_screen.dart';
 import 'package:xwood/screens/home_screen/home_screen.dart';
 import 'package:xwood/screens/product/filter/fliter_screen.dart';
 import 'package:xwood/screens/product/product_detail_screen.dart';
+import 'package:xwood/screens/user_profile/profile_screen.dart';
 import 'package:xwood/screens/welcome/choose_lang_screen.dart';
 import 'package:xwood/screens/welcome/get_start_screen.dart';
 import 'package:xwood/screens/welcome/splash_screen.dart';
@@ -38,6 +39,7 @@ class AppRoutes {
   static const String paymentScreen = "/paymentScreen";
 
   // user profile
+  static const String profileScreen = "/profileScreen";
   static const String profileSetupScreen = "/profileSetupScreen";
   static const String addAddressScreen = "/addAddressScreen";
   static const String favouriteScreen = "/favouriteScreen";
@@ -63,6 +65,7 @@ class AppRoutes {
     GetPage(name: loginScreen, page: () => LoginScreen()),
     GetPage(name: otpScreen, page: () => OtpVerificationScreen()),
     GetPage(name: homeScreen, page: () => HomeScreen()),
+    GetPage(name: profileScreen, page: () => ProfileScreen()),
     GetPage(name: profileSetupScreen, page: () => ProfileSetupScreen()),
     GetPage(name: categoryScreen, page: () => CategoryScreen()),
     GetPage(name: filterScreen, page: () => ProductFilterScreen()),

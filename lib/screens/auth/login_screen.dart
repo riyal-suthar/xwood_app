@@ -17,70 +17,64 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: px24,
-          child: SizedBox(
-            width: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              textDirection: TextDirection.ltr,
-              // spacing: 12.0,
-              children: [
-                gap16,
-                CustomPageTitleText(
-                  title: "Lets Get Started",
-                  subtitle: "dvcsd daccccc adsc as sd dddddddddddd",
-                ),
-                gap40,
-                CustomMobileTextField(codeController: _countryCodeC, mobileNoController: _mobileC),
-                gap30,
-                CustomElevatedButton(
-                  btnName: "Continue",
-                  onPressed: onContinue,
-                ),
-                gap24,
-                CustomOutlinedButton(
-                  btnName: 'Continue as Guest',
-                  btnPressed: onContinueAsGuest,
-                ),
-
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: RichText(
-                    text:  TextSpan(
-                      children: [
-                        TextSpan(text: 'By continuing, I agree to the '),
-                        TextSpan(
-                          text: 'Terms of Use',
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: AppColorConst.primary,
-                          ),
-                        ),
-                        TextSpan(text: ' & '),
-                        TextSpan(
-                          recognizer: TapGestureRecognizer()..onTap = (){},
-                          text: 'Privacy Policy',
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: AppColorConst.primary,
-                          ),
-                        ),
-                      ],
+      child: Padding(
+        padding: p24,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisSize: MainAxisSize.max,
+          textDirection: TextDirection.ltr,
+          children: [
+            gap16,
+            CustomPageTitleText(
+              title: "Lets Get Started",
+              subtitle: "dvcsd daccccc adsc as sd dddddddddddd",
+            ),
+            gap40,
+            CustomMobileTextField(codeController: _countryCodeC, mobileNoController: _mobileC),
+            gap30,
+            CustomElevatedButton(
+              btnName: "Continue",
+              onPressed: onContinue,
+            ),
+            gap24,
+            CustomOutlinedButton(
+              btnName: 'Continue as Guest',
+              btnPressed: onContinueAsGuest,
+            ),
+            gap48,
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: RichText(
+                text:  TextSpan(
+                  children: [
+                    TextSpan(text: 'By continuing, I agree to the '),
+                    TextSpan(
+                      text: 'Terms of Use',
                       style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        fontSize: 16,
-                        color: Colors.black,
+                        decoration: TextDecoration.underline,
+                        color: AppColorConst.primary,
                       ),
                     ),
+                    TextSpan(text: ' & '),
+                    TextSpan(
+                      recognizer: TapGestureRecognizer()..onTap = (){},
+                      text: 'Privacy Policy',
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: AppColorConst.primary,
+                      ),
+                    ),
+                  ],
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16,
+                    color: Colors.black,
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
